@@ -72,23 +72,7 @@ class PayTraceConnector:
 
     def keyed_sale(self,data):
         """ Submit a manually keyed transaction
-        :data json data representing the transaction
-            {
-                  "amount": "1.00",
-                  "credit_card": {
-                    "number": "4111111111111111",
-                    "expiration_month": "12",
-                    "expiration_year": "2020"
-                  },
-                  "csc": "999",
-                  "billing_address": {
-                    "name": "Steve Smith",
-                    "street_address": "8320 E. West St.",
-                    "city": "Spokane",
-                    "state": "WA",
-                    "zip": "85284"
-                  }
-                }
+        :data dictionary representing the transaction data
         """
 
         url = self.API_END_POINT+self.API_VERSION+'/transactions/sale/keyed'
